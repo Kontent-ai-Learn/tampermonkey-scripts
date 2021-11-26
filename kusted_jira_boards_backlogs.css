@@ -1,0 +1,80 @@
+/* Hide "None" and Priority on board cards */
+.ghx-extra-fields > .ghx-row > span.ghx-extra-field[data-tooltip="Fix versions: None"], .ghx-extra-fields > .ghx-row > span.ghx-extra-field[data-tooltip="Due date: None"], .ghx-row > span.ghx-field[data-tooltip$=" priority"] {
+    display: none;
+}
+
+/* Get the issue type and assigneed on one row for smaller or zoomed screens */
+.ghx-column.ghx-narrow-card > .ghx-wrap-issue > .ghx-issue > .ghx-stat-fields {
+    justify-content: space-between;
+}
+
+.ghx-column.ghx-narrow-card > .ghx-wrap-issue > .ghx-issue > .ghx-stat-fields > .ghx-row {
+    width: auto;
+    flex: inherit;
+}
+
+/* Lower the header */
+    /* Hide the breadcrumbs */
+    #ak-main-content > div > div[data-testid="rapidboard-breadcrumbs"] {
+        display: none;
+    }
+
+    /* Hide h1 with the "Kanbard board" label */
+    #ghx-header > .ghx-top-header > #ghx-view-selector {
+        display: none;
+    }
+
+    /* Make board tools floating on the right */
+    #ghx-header > .ghx-top-header > #ghx-modes-tools {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        z-index: 1;
+    }
+
+    /* Hide assignee search filter and assignee icon filter */
+    #ghx-quick-filters > ul > .ghx-backlog-search-container, #ghx-quick-filters > ul > li:nth-child(2) {
+        display: none;
+    }
+
+    /* Make quick filters prettier */
+    #ghx-quick-filters {
+        margin: -15px auto -5px auto;
+    }
+
+    /* Hie the Release button */
+    #ghx-modes-tools > #ghx-header-dynamic-append-zone > #ghx-release {
+        display: none;
+    }
+
+/* Hide Improvement issue type icon and ID */
+.ghx-type-4 section.ghx-stat-fields, .ghx-type-4 div.ghx-grabber, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-stat-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 div.ghx-grabber {
+    display: none;
+}
+
+.ghx-type-4 section.ghx-summary, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-summary {
+    display: inline;
+}
+
+.ghx-type-4 section.ghx-extra-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-extra-fields {
+    display: inline-table;
+    margin-top: 0;
+}
+
+.ghx-type-4.ghx-issue.ghx-newcard, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-type-4.ghx-issue.ghx-newcard {
+    padding: 2px;
+    background-color: transparent;
+}
+
+/* Show number of days instead of color dots */
+span.ghx-field > div.ghx-days {
+    background: transparent;
+    line-height: 0;
+    margin-top: 7px;
+}
+
+span.ghx-field > div.ghx-days::after {
+    content: attr(data-tooltip) ": ";
+    color: #b9b9b9;
+    word-spacing: 100px;
+}
