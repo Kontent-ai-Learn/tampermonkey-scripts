@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Jira board and backlog beautification
 // @namespace    https://docs.kontent.ai/
-// @version      3.0
+// @version      3.0.1
 // @description  Collapses the top bar for company-managed boards and backlogs
 // @author       Tomas Nosek, Kentico
 // @match        https://kentico.atlassian.net/jira/software/c/projects/
