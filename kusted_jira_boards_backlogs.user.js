@@ -11,7 +11,7 @@
 // @resource     IMPORTED_CSS https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/kusted_jira_boards_backlogs.css
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
-// @commithandle Jira board&backlog
+// @commithandle Jira issues
 // ==/UserScript==
 
 (function() {
