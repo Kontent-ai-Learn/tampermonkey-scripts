@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name         KustEd Kontent Docs improvements
 // @namespace    https://docs.kontent.ai/
-// @version      3.0.0
+// @version      3.0.1
 // @description  Adds the preview link and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://docs.kontent.ai/*
 // @icon         https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/custedlogo_48.png
 // @updateURL    https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
 // @grant        none
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @commithandle KK Learn
 // ==/UserScript==
 
