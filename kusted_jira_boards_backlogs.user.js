@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         KustEd Jira board and backlog beautification
 // @namespace    https://docs.kontent.ai/
-// @version      3.0.2
+// @version      3.0.3
 // @description  Collapses the top bar for company-managed boards and backlogs
 // @author       Tomas Nosek, Kentico
 // @match        https://kentico.atlassian.net/jira/software/c/projects/
-// @include      */boards/*
+// @include      https://kentico.atlassian.net/jira/software/c/projects/*/boards/*
 // @icon         https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/custedlogo_16.png
 // @updateURL    https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_jira_boards_backlogs.user.js
 // @resource     IMPORTED_CSS https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/kusted_jira_boards_backlogs.css
