@@ -24,6 +24,11 @@
         display: none;
     }
 
+    /* Hide the "Insights" button */
+    #ghx-operations > #ghx-controls-buttons {
+        display: none;
+    }
+
     /* Make board tools floating on the right */
     #ghx-header > .ghx-top-header > #ghx-modes-tools {
         position: absolute;
