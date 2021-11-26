@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kontent app beautification
 // @namespace    https://docs.kontent.ai/
-// @version      3.0.0
+// @version      3.0.1
 // @description  Collapses large padding, hides guidelines when not editing, makes editable parts of the app more prominent, always shows all filters.
 // @author       Tomas Nosek, Kentico
 // @include      https://app.kontent.ai/*
@@ -26,12 +26,10 @@
             
             for (let i = 0; i < mutation.addedNodes.length; i++) {
                 // Show all saved filters
-                if (isContentInventory() && $('body').hasClass(SETTINGS_KKA_FILTERS)) {
-                    let node = mutation.addedNodes[i];
-                    if (node.innerText != null && node.innerText.toLowerCase().indexOf('show all filters') > -1)
-                    {
-                        $(node).find('button:contains("Show all filters")').click();
-                    }
+                let node = mutation.addedNodes[i];
+                if (node.innerText != null && node.innerText.toLowerCase().indexOf('show all filters') > -1)
+                {
+                    $(node).find('button:contains("Show all filters")').click();
                 }
             }
         });
