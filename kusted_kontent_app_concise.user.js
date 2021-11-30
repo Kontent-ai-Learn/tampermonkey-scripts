@@ -27,10 +27,12 @@
             
             for (let i = 0; i < mutation.addedNodes.length; i++) {
                 // Show all saved filters
-                let node = mutation.addedNodes[i];
-                if (node.innerText != null && node.innerText.toLowerCase().indexOf('show all filters') > -1)
-                {
-                    $(node).find('button:contains("Show all filters")').click();
+                if (window.location.href.indexOf("/content-inventory/") > -1) {
+                    let node = mutation.addedNodes[i];
+                    if (node.innerText != null && node.innerText.toLowerCase().indexOf('show all filters') > -1)
+                    {
+                        $(node).find('button:contains("Show all filters")').click();
+                    }
                 }
             }
         });
@@ -40,8 +42,4 @@
         childList: true
         , subtree: true
     });
-
-    function isContentInventory() {
-        return window.location.href.indexOf("content-inventory/0") > -1;
-    }
 })();
