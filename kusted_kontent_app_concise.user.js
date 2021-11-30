@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kontent app beautification
 // @namespace    https://docs.kontent.ai/
-// @version      3.0.1
+// @version      3.0.2
 // @description  Collapses large padding, hides guidelines when not editing, makes editable parts of the app more prominent, always shows all filters.
 // @author       Tomas Nosek, Kentico
 // @include      https://app.kontent.ai/*
@@ -16,6 +16,7 @@
 
 (function() {
     'use strict';
+    var $ = window.jQuery;
 
     const css = GM_getResourceText("IMPORTED_CSS");
     GM_addStyle(css);
