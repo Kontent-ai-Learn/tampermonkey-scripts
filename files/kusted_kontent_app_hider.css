@@ -1,0 +1,23 @@
+/* Rename Safelife */
+    body.kusted-safelife div[data-ui-action=open-project-menu] .status-bar__dropdown-text, body.kusted-safelife div[data-ui-action=open-environment-menu] .status-bar__dropdown-text {
+        visibility: hidden;
+        font-size: 0px;
+        padding-top: 4px;
+    }
+
+    body.kusted-safelife div[data-ui-action=open-project-menu] .status-bar__dropdown-text::after {
+        content: "Safelife";
+        visibility: visible;
+        font-size: 14px;
+    }
+
+    body.kusted-safelife div[data-ui-action=open-environment-menu] .status-bar__dropdown-text::after {
+        content: "Production";
+        visibility: visible;
+        font-size: 14px;
+    }
+
+/* Hide Beta tag */
+    .tag.tag--beta, .beta-tag {
+        display: none;
+    }
