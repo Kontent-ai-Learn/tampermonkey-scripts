@@ -7,6 +7,9 @@ Sorry to hear that. Just log a new [GitHub issue](https://github.com/KenticoDocs
 ## Contributions
 Feel free to create pull requests with additional improvements or bug fixes. Make sure that your contribution works well before you create the pull request.
 
+If you change functionality to one script only, use the commit handles for individual scripts as a prefix in parentheses. The commit handle is visible in each _.user.js_ file in the header under _@commithandle_. For example, the commit name can look like this:
+`(Jira issues) Add edit link and shortcut`
+
 ## License
 - These scripts are under the MIT license.
 - As they're indended primarily for internal Kentico purposes, there is no guarantee in any functionality.
