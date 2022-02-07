@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kontent app beautification
 // @namespace    https://kontent.ai/learn
-// @version      3.1.0
+// @version      3.1.1
 // @description  Collapses large padding, hides guidelines when not editing, makes editable parts of the app more prominent, always shows all filters.
 // @author       Tomas Nosek, Kentico
 // @include      https://app.kontent.ai/*
@@ -38,7 +38,7 @@
             }
         });
     });
-    
+
     observer.observe(document.body, {
         childList: true
         , subtree: true
