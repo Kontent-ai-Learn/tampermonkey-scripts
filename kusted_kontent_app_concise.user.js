@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kontent app beautification
 // @namespace    https://kontent.ai/learn
-// @version      3.1.1
+// @version      3.1.2
 // @description  Collapses large padding, hides guidelines when not editing, makes editable parts of the app more prominent, always shows all filters.
 // @author       Tomas Nosek, Kentico
 // @include      https://app.kontent.ai/*
@@ -25,7 +25,7 @@
     let observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
             if (!mutation.addedNodes) return
-            
+
             for (let i = 0; i < mutation.addedNodes.length; i++) {
                 // Show all saved filters
                 if (window.location.href.indexOf("/content-inventory/") > -1) {
