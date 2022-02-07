@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         KustEd Kontent Docs improvements
 // @namespace    https://docs.kontent.ai/
-// @version      3.1.0
+// @version      3.1.1
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
-// @include      https://docs.kontent.ai/*
+// @include      https://kontent.ai/learn/*
 // @icon         https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/custedlogo_48.png
 // @updateURL    https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
 // @grant        none
@@ -25,7 +25,7 @@
     });
     
     async function displayPreviewLink() {
-        $('.article__notes').append('<a href="' + window.location.href.replace('docs.kontent.ai', 'kcd-web-preview-master.azurewebsites.net') + '" target="_blank" id="' + PREVIEW_ID + '" rel="noopener">Preview</a>');
+        $('.article__notes').append('<a href="' + window.location.href.replace('kontent.ai/learn', 'kcd-web-preview-master.azurewebsites.net') + '" target="_blank" title="Press p or w" id="' + PREVIEW_ID + '" rel="noopener">Preview</a>');
     }
 
     async function displayEditLink() {
@@ -38,7 +38,7 @@
                 var htmlDocument = parser.parseFromString(text, "text/html");
                 var edit_link = htmlDocument.documentElement.querySelector(".article__notes > a[rel='noopener']").href;
                 if (edit_link.length > 0) {
-                    $('.article__notes').append('<a href="' + edit_link + '" target="_blank" id="' + EDIT_ID + '" rel="noopener">Edit</a>');
+                    $('.article__notes').append('<a href="' + edit_link + '" target="_blank" title="Press e" id="' + EDIT_ID + '" rel="noopener">Edit</a>');
                 }
             });
         }
