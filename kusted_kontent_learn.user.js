@@ -26,7 +26,7 @@
     });
     
     async function displayPreviewLink() {
-        $('.article__notes').append('<a href="' + window.location.href.replace('kontent.ai/learn', 'kcd-web-preview-master.azurewebsites.net') + '" target="_blank" title="Press p or w" id="' + PREVIEW_ID + '" rel="noopener">Preview</a>');
+        $('.article__notes').append('<a href="' + window.location.href.replace('kontent.ai/learn', 'kcd-web-preview-master.azurewebsites.net/learn') + '" target="_blank" title="Press p or w" id="' + PREVIEW_ID + '" rel="noopener">Preview</a>');
     }
 
     async function displayEditLink() {
