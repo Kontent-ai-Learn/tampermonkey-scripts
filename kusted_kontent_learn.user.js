@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.2.0
+// @version      3.2.1
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://kontent.ai/learn/*
