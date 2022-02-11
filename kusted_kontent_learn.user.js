@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.3.2
+// @version      3.3.3
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://kontent.ai/learn/*
@@ -33,7 +33,7 @@
     async function displayEditLink() {
         let preview_link = $('#' + PREVIEW_ID).attr('href');
         if (preview_link.length > 0) {
-            $('.article__notes').append('<span id="' + EDIT_ID_LOAD + ' style="font-size: 70%;">⌛</span>');
+            $('.article__notes').append('<span id="' + EDIT_ID_LOAD + '" style="font-size: 70%;">⌛</span>');
 
             fetch(preview_link)
                 .then(response => response.text())
