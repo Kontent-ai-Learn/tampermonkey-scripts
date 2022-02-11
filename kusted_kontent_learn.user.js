@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.2.1
+// @version      3.3.0
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://kontent.ai/learn/*
@@ -19,36 +19,60 @@
 
     const PREVIEW_ID = 'kusted_preview';
     const EDIT_ID = 'kusted_edit';
+    const EDIT_ID_LOAD = EDIT_ID + '_load';
 
     $(document).ready(async function() {
         await displayPreviewLink();
         await displayEditLink();
     });
-    
+
     async function displayPreviewLink() {
         $('.article__notes').append('<a href="' + window.location.href.replace('kontent.ai/learn', 'kcd-web-preview-master.azurewebsites.net/learn') + '" target="_blank" title="Press p or w" id="' + PREVIEW_ID + '" rel="noopener">Preview</a>');
     }
 
     async function displayEditLink() {
-        var preview_link = $('#' + PREVIEW_ID).attr('href');
+        let preview_link = $('#' + PREVIEW_ID).attr('href');
         if (preview_link.length > 0) {
+            $.keyframe.define([{
+                  name:'spin',
+                  from: {
+                    'transform':'rotate(0deg)'
+                  },
+                  to: {
+                    'transform':'rotate(360deg)'
+                  }
+                }]);
+
+            $('.article__notes').append('<span id="' + EDIT_ID_LOAD + ' style="font-size: 70%;">⌛</span>');
+            $('#' + EDIT_ID_LOAD).playKeyframe({
+                name: 'spin',
+                duration: "5s",
+                timingFunction: 'linear',
+                iterationCount: 'infinite',
+                direction: 'normal',
+                fillMode: 'forwards'
+            });
+
             fetch(preview_link)
                 .then(response => response.text())
                 .then(text => {
-                var parser = new DOMParser();
-                var htmlDocument = parser.parseFromString(text, "text/html");
-                var edit_link = htmlDocument.documentElement.querySelector(".article__notes > a[rel='noopener']").href;
-                if (edit_link.length > 0) {
-                    $('.article__notes').append('<a href="' + edit_link + '" target="_blank" title="Press e" id="' + EDIT_ID + '" rel="noopener">Edit</a>');
-                }
-            });
+                    let parser = new DOMParser();
+                    let htmlDocument = parser.parseFromString(text, "text/html");
+                    let edit_link = htmlDocument.documentElement.querySelector(".article__notes > a[rel='noopener']").href;
+                    if (edit_link.length > 0) {
+                        $('#' + EDIT_ID_LOAD).insertAfter('<a href="' + edit_link + '" target="_blank" title="Press e" id="' + EDIT_ID + '" rel="noopener">Edit</a>');
+                    };
+                })
+                .then(
+                    $('#' + EDIT_ID_LOAD).remove()
+                );
         }
     }
-    
+
     $(document).keypress(function(e){
         if (!($("input").is(":focus")) && $('#' + PREVIEW_ID).length > 0) {
             let key = e.keyCode;
-    
+
             switch (key) {
                 case 112: // key code for 'p'
                 case 119: // key code for 'w'
