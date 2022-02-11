@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.3.1
+// @version      3.3.2
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://kontent.ai/learn/*
@@ -9,8 +9,7 @@
 // @updateURL    https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
 // @downloadURL  https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
 // @grant        none
-// @require      https://code.jquery.com/jquery-3.6.0.slim.min.js
-// @require      /path/to/jquery.keyframes[.min].js
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @commithandle KK Learn
 // ==/UserScript==
 
@@ -34,25 +33,7 @@
     async function displayEditLink() {
         let preview_link = $('#' + PREVIEW_ID).attr('href');
         if (preview_link.length > 0) {
-            $.keyframe.define([{
-                  name:'spin',
-                  from: {
-                    'transform':'rotate(0deg)'
-                  },
-                  to: {
-                    'transform':'rotate(360deg)'
-                  }
-                }]);
-
             $('.article__notes').append('<span id="' + EDIT_ID_LOAD + ' style="font-size: 70%;">⌛</span>');
-            $('#' + EDIT_ID_LOAD).playKeyframe({
-                name: 'spin',
-                duration: "5s",
-                timingFunction: 'linear',
-                iterationCount: 'infinite',
-                direction: 'normal',
-                fillMode: 'forwards'
-            });
 
             fetch(preview_link)
                 .then(response => response.text())
