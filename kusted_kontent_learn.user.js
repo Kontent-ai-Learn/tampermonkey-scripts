@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.3.4
+// @version      3.3.5
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kentico
 // @include      https://kontent.ai/learn/*
@@ -43,11 +43,14 @@
                     let edit_link = htmlDocument.documentElement.querySelector(".article__notes > a[rel='noopener']").href;
                     if (edit_link.length > 0) {
                         $('#' + EDIT_ID_LOAD).replaceWith('<a href="' + edit_link + '" target="_blank" title="Press e" id="' + EDIT_ID + '" rel="noopener">Edit</a>');
+                    } else {
+                        $('#' + EDIT_ID_LOAD).remove();
+                        console.log('Preview link error: No edit link found.');
                     };
                 })
                 .catch(error => {
                     $('#' + EDIT_ID_LOAD).remove();
-                    console.log(error.message);
+                    console.log('Preview link error: ' + error.message);
                 });
         }
     }
