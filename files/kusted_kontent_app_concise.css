@@ -1,6 +1,12 @@
 /* Make the uneditable parts of elements different from the editable parts */
 .content-item-element__wrapper {
-    background: rgba(255, 255, 255, 0.5);
+    background: repeating-linear-gradient(
+      45deg,
+      #e4e7eb,
+      #edf0f5 5px,
+      #e4e7eb 1px,
+      #edf0f5 10px
+    );
 }
 
 /* Make the editable parts of elements white again */
