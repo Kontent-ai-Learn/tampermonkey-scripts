@@ -52,25 +52,6 @@
         display: none;
     }
 
-/* Hide Improvement issue type icon and ID */
-.ghx-type-4 section.ghx-stat-fields, .ghx-type-4 div.ghx-grabber, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-stat-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 div.ghx-grabber {
-    display: none;
-}
-
-.ghx-type-4 section.ghx-summary, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-summary {
-    display: inline;
-}
-
-.ghx-type-4 section.ghx-extra-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-extra-fields {
-    display: inline-table;
-    margin-top: 0;
-}
-
-.ghx-type-4.ghx-issue.ghx-newcard, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-type-4.ghx-issue.ghx-newcard {
-    padding: 2px;
-    background-color: transparent;
-}
-
 /* Show number of days instead of color dots */
 span.ghx-field > div.ghx-days {
     background: transparent;
