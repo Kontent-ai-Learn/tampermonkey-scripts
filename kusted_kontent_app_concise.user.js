@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Kontent app beautification
 // @namespace    https://kontent.ai/learn
-// @version      3.1.3
+// @version      3.1.4
 // @description  Collapses large padding, hides guidelines when not editing, makes editable parts of the app more prominent, always shows all filters.
 // @author       Tomas Nosek, Kontent.ai
 // @include      https://app.kontent.ai/*
-// @icon         https://raw.githubusercontent.com/kontent-ai/tampermonkey-scripts/master/files/custedlogo_48.png
-// @updateURL    https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_app_concise.user.js
-// @downloadURL  https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_app_concise.user.js
-// @resource     IMPORTED_CSS https://raw.githubusercontent.com/kontent-ai/tampermonkey-scripts/master/files/kusted_kontent_app_concise.css
+// @icon         https://raw.githubusercontent.com/Kontent-ai-Learn/tampermonkey-scripts/master/files/custedlogo_48.png
+// @updateURL    https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_app_concise.user.js
+// @downloadURL  https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_app_concise.user.js
+// @resource     IMPORTED_CSS https://raw.githubusercontent.com/Kontent-ai-Learn/tampermonkey-scripts/master/files/kusted_kontent_app_concise.css
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle

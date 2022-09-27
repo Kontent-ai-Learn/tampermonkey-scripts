@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Kontent app hider
 // @namespace    https://kontent.ai/learn
-// @version      3.1.1
+// @version      3.1.2
 // @description  Hides projects from the project drop-down list, hides beta tags, renames Safelife according to CustEd's agreement.
 // @author       Tomas Nosek, Kontent.ai
 // @include      https://app.kontent.ai/*
-// @icon         https://raw.githubusercontent.com/kontent-ai/tampermonkey-scripts/master/files/custedlogo_48.png
-// @updateURL    https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_app_hider.user.js
-// @downloadURL  https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_app_hider.user.js
-// @resource     IMPORTED_CSS https://raw.githubusercontent.com/kontent-ai/tampermonkey-scripts/master/files/kusted_kontent_app_hider.css
+// @icon         https://raw.githubusercontent.com/Kontent-ai-Learn/tampermonkey-scripts/master/files/custedlogo_48.png
+// @updateURL    https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_app_hider.user.js
+// @downloadURL  https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_app_hider.user.js
+// @resource     IMPORTED_CSS https://raw.githubusercontent.com/Kontent-ai-Learn/tampermonkey-scripts/master/files/kusted_kontent_app_hider.css
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle

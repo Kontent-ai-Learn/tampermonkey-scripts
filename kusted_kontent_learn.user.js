@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         KustEd Kontent Learn improvements
 // @namespace    https://kontent.ai/learn
-// @version      3.3.6
+// @version      3.3.7
 // @description  Adds the preview and edit links and keyboard shortcuts to the articles.
 // @author       Tomas Nosek, Kontent.ai
 // @include      https://kontent.ai/learn/*
-// @icon         https://raw.githubusercontent.com/kontent-ai/tampermonkey-scripts/master/custedlogo_48.png
-// @updateURL    https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
-// @downloadURL  https://github.com/kontent-ai/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
+// @icon         https://raw.githubusercontent.com/Kontent-ai-Learn/tampermonkey-scripts/master/custedlogo_48.png
+// @updateURL    https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
+// @downloadURL  https://github.com/Kontent-ai-Learn/tampermonkey-scripts/raw/master/kusted_kontent_learn.user.js
 // @grant        none
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @commithandle Kontent.ai Learn
