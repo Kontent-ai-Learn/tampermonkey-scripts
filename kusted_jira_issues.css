@@ -1,9 +1,0 @@
-/* Hide Automation and Diagrams fields */
-div[data-test-id="issue.views.issue-base.context.ecosystem-glance-panel"] {
-    display: none;
-}
-
-/* Hide Share button */
-div[data-testid="share-button.ui.share-view.tooltip--container"] {
-    display: none;
-}

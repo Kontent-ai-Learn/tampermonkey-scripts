@@ -13,7 +13,7 @@
     flex: inherit;
 }
 
-/* Lower the header and make backlogs and boards less cluttered */
+/* Lower the header */
     /* Hide the breadcrumbs */
     #ak-main-content > div > div[data-testid="rapidboard-breadcrumbs"] {
         display: none;
@@ -47,55 +47,10 @@
         margin: -15px auto -5px auto;
     }
 
-    /* Hide the Release button */
+    /* Hie the Release button */
     #ghx-modes-tools > #ghx-header-dynamic-append-zone > #ghx-release {
         display: none;
     }
-
-    /* Hide the Automation and Share buttons (next to More options button for Board settings) */
-    #ghx-modes-tools > #ghx-automation, #ghx-modes-tools > #ghx-share {
-        display: none;
-    }
-
-    /* Hide sprint settings in backlogs */
-    .ghx-backlog-header button.js-sprint-start, .ghx-backlog-header > .ghx-sprint-info {
-        display: none;
-    }
-
-    /* Hide priority not set in backlogs */
-    .ghx-issues > .ghx-backlog-card > .ghx-issue-content > .ghx-row.ghx-end.ghx-items-container > span.ghx-end.ghx-items-container > span.ghx-priority[title="Not set"] {
-        visibility: hidden;
-    }
-
-/* Adjust the issue view in the backlog's sidebar or board's popup */
-    /* Hide Automation and Draw.io Diagrams fields */
-    div[data-test-id="issue-view-layout-templates-views.ui.context.visible-hidden.ui.context-group.details-group"] > div[data-test-id="issue.views.issue-base.context.ecosystem-glance-panel"] {
-        display: none;
-    }
-
-/* Hide the help question-mark icon in the top toolbar */
-#ak-jira-navigation > header > div > span:nth-of-type(2) {
-    display: none;
-}
-
-/* Hide Improvement issue type icon and ID */
-.ghx-type-4 section.ghx-stat-fields, .ghx-type-4 div.ghx-grabber, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-stat-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 div.ghx-grabber {
-    display: none;
-}
-
-.ghx-type-4 section.ghx-summary, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-summary {
-    display: inline;
-}
-
-.ghx-type-4 section.ghx-extra-fields, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-issue.ghx-type-4 section.ghx-extra-fields {
-    display: inline-table;
-    margin-top: 0;
-}
-
-.ghx-type-4.ghx-issue.ghx-newcard, .ghx-narrow-card.ghx-xtra-narrow-card .ghx-type-4.ghx-issue.ghx-newcard {
-    padding: 2px;
-    background-color: transparent;
-}
 
 /* Show number of days instead of color dots */
 span.ghx-field > div.ghx-days {
