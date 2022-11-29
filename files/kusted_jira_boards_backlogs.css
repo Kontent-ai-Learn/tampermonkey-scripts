@@ -64,3 +64,8 @@ span.ghx-field > div.ghx-days::after {
     color: #b9b9b9;
     word-spacing: 100px;
 }
+
+/* Alternate background colors for backlog rows */
+.js-issue.ghx-backlog-card.ghx-issue-compact {
+    border: 1px solid #BBB;
+}
