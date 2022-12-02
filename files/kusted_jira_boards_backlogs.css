@@ -66,7 +66,7 @@ span.ghx-field > div.ghx-days::after {
 }
 
 /* Alternate background colors for backlog rows */
-.js-issue.ghx-backlog-card.ghx-issue-compact, .js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end {
+.js-issue.ghx-backlog-card.ghx-issue-compact:nth-child(even), .js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end:nth-child(even) {
     background-color: #f5f5f5;
 }
 
