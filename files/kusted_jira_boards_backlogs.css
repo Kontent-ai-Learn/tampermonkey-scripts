@@ -70,7 +70,7 @@ span.ghx-field > div.ghx-days::after {
     background-color: #f5f5f5;
 }
 
-.js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end {
+.js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end, .js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end.flagged {
     background-color: transparent;
 }
 
