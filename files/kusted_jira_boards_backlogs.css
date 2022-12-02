@@ -66,6 +66,10 @@ span.ghx-field > div.ghx-days::after {
 }
 
 /* Alternate background colors for backlog rows */
-.js-issue.ghx-backlog-card.ghx-issue-compact {
-    border: 1px solid #BBB;
+.js-issue.ghx-backlog-card.ghx-issue-compact, .js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end {
+    background-color: #f5f5f5;
+}
+
+.js-issue.ghx-backlog-card.ghx-issue-compact:hover, .js-issue.ghx-backlog-card.ghx-issue-compact .ghx-end:hover {
+    background-color: #f0f0f0;
 }
