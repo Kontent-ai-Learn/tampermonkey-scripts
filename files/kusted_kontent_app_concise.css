@@ -4,7 +4,7 @@
 }
 
 /* Make the editable parts of elements white again */
-div[data-ui-input="item-text-element"]:not(.rte__content--is-disabled), div[data-ui-element="rte-content"]:not(.rte__content--is-disabled), div:not(.content-item-element--is-disabled) > .content-item-element__content > div > input.number__input, .content-item-element--is-name .content-item-element__name, div:not(.content-item-element--is-disabled) > .content-item-element__content input[data-ui-input="date-time"], div:not(.content-item-element--is-disabled) > .content-item-element__content .text-field__input {
+div[data-ui-element="rte-content"]:not(.rte__content--is-disabled), div:not(.content-item-element--is-disabled) > .content-item-element__content > div > input.number__input, .content-item-element--is-name .content-item-element__name, div:not(.content-item-element--is-disabled) > .content-item-element__content input[data-ui-input="date-time"], div:not(.content-item-element--is-disabled) > .content-item-element__content .text-field__input {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
