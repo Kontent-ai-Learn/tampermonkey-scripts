@@ -4,7 +4,7 @@
 // @version      3.1.0
 // @description  Adds the championship culture chart as a background to the Small Improvements review charts.
 // @author       Tomas Nosek, Kentico
-// @include      https://kentico.small-improvements.com/*
+// @include      https://kontent.small-improvements.com/*
 // @icon         https://raw.githubusercontent.com/KenticoDocs/tampermonkey-scripts/master/files/custedlogo_48.png
 // @updateURL    https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_small_improvements.user.js
 // @downloadURL  https://github.com/KenticoDocs/tampermonkey-scripts/raw/master/kusted_small_improvements.user.js
